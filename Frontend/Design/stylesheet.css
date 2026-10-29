@@ -1,0 +1,270 @@
+/* MAin Stylesheet for the Page Tables, Needs More CSS If adding more LAyers for the PAge */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f8f4;
+  color: #26352b;
+}
+
+/*Main Themne LAyout Need to Adjust Later for Mobile view and Screen Change to vary           */
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+/*Panels For the List and Edit for Looks*/
+.col1,
+.col2 {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #d5e4d7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(28, 75, 42, 0.06);
+}
+
+/*First Form*/
+.col1 {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/*Form2*/
+.col2 {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* headER*/
+
+.header,
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #236b3b;
+  font-weight: 700;
+}
+
+/*Button Styles LAter Will Change for the Express*/
+
+.header-buttons,
+.panel-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-add,
+.btn-delete,
+.btn-save,
+.btn-cancel {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn-add {
+  background: #2e8b57;
+}
+
+.btn-delete {
+  background: #c62828;
+}
+
+.btn-save {
+  background: #237a43;
+}
+
+.btn-cancel {
+  background: #6b7280;
+}
+
+.btn-add:hover,
+.btn-save:hover {
+  background: #1e653b;
+}
+
+.btn-delete:hover {
+  background: #a61f1f;
+}
+
+.btn-cancel:hover {
+  background: #4b5563;
+}
+
+/* Search Does Nothing yet, Will Update in  */
+
+.search-container {
+  margin-bottom: 16px;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #c9d9cc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-container input:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.12);
+}
+
+/* TAble Appearasnce */
+
+.table-container {
+  background: #ffffff;
+  max-height: 75vh;
+  overflow: auto;
+  border: 1px solid #d5e4d7;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: #2e8b57;
+  z-index: 1;
+}
+
+th {
+  padding: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e2eae3;
+}
+
+tbody tr:nth-child(even) {
+  background: #f4f8f4;
+}
+
+tbody tr:hover {
+  background: #e5f3e8;
+}
+
+/*Forms */
+
+.student-panel {
+  width: 100%;
+}
+
+.student-panel h2 {
+  color: #236b3b;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.student-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  color: #285c38;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #c9d9cc;
+  border-radius: 6px;
+  outline: none;
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.12);
+}
+
+.email {
+  grid-column: 1 / -1;
+}
+
+.panel-buttons {
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/*Collapsing Button {Anel*/
+
+#togglePanel {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  background: #2e8b57;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#togglePanel:hover {
+  background: #1e653b;
+}
+
+.main-container.collapsed {
+  grid-template-columns: 1fr;
+}
+
+.main-container.collapsed .col2 {
+  display: none;
+}
