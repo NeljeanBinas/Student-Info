@@ -1,10 +1,11 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Design/stylesheet.css" />
-    <title>Document</title>
+    <title>Student Information System</title>
   </head>
   <body>
     <div class="main-container">
@@ -15,10 +16,9 @@
           <h1>Student Information</h1>
           <div class="header-buttons"></div>
         </div>
-
         <div class="search-container">
           <input type="text" id="search-student" placeholder="Search Student" />
-          <button class="btn-add" id="addButton">Add</button>
+          <button class="btn-add" id="addButton" type="button">Add</button>
         </div>
 
         <div class="table-container">
@@ -41,33 +41,38 @@
       </div>
 
       <!--secoendpanel Copy Online Legendf-->
-      <button id="togglePanel">☰</button>
+      <button
+        id="togglePanel"
+        type="button"
+        aria-label="Toggle information panel"
+      >
+        ☰
+      </button>
 
       <!-- DB alr crated, LAter add the fILE and Copy the Schema-->
-      <div class="student-panel">
+      <div class="col2">
         <div class="student-header">
           <h2>Information Panel</h2>
         </div>
 
         <div class="student-form">
           <div class="form-group">
-            <label>Last Name</label>
+            <label for="lastName">Last Name</label>
             <input type="text" id="lastName" />
           </div>
 
           <div class="form-group">
-            <label>First Name</label>
+            <label for="firstName">First Name</label>
             <input type="text" id="firstName" />
           </div>
 
           <div class="form-group">
-            <label>Middle Name</label>
+            <label for="middleName">Middle Name</label>
             <input type="text" id="middleName" />
           </div>
 
           <div class="form-group">
-            <label>Gender</label>
-
+            <label for="gender">Gender</label>
             <select id="gender">
               <option>Male</option>
               <option>Female</option>
@@ -75,29 +80,33 @@
           </div>
 
           <div class="form-group">
-            <label>Academic Level</label>
+            <label for="academicLevel">Academic Level</label>
             <input type="text" id="academicLevel" />
           </div>
 
           <div class="form-group">
-            <label>Section</label>
+            <label for="section">Section</label>
             <input type="text" id="section" />
           </div>
 
           <div class="form-group email">
-            <label>Email</label>
+            <label for="email">Email</label>
             <input type="email" id="email" />
           </div>
         </div>
 
         <div class="panel-buttons">
-          <button class="btn-save" id="saveButton">Save</button>
-
-          <button class="btn-cancel" id="cancelButton">Cancel</button>
-
-          <button class="btn-delete" id="deleteButton">Delete</button>
+          <button class="btn-save" id="saveButton" type="button">Save</button>
+          <button class="btn-cancel" id="cancelButton" type="button">
+            Cancel
+          </button>
+          <button class="btn-delete" id="deleteButton" type="button">
+            Delete
+          </button>
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
