@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- First Panel THE Info Must BE Shown In Hreer Col1 col2 would 
+         Later be the Panel for Edit-->
+      <div class="col1">
+        <div class="header">
+          <h1>Student Information</h1>
+          <div class="header-buttons"></div>
+        </div>
+
+        <div class="search-container">
+          <input type="text" id="search-student" placeholder="Search Student" />
+          <button class="btn-add" id="addButton">Add</button>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Gender</th>
+                <th>Academic Level</th>
+                <th>Section</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+
+            <tbody id="studentTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!--secoendpanel Copy Online Legendf-->
+      <button id="togglePanel">☰</button>
+
+      <!-- DB alr crated, LAter add the fILE and Copy the Schema-->
+      <div class="student-panel">
+        <div class="student-header">
+          <h2>Information Panel</h2>
+        </div>
+
+        <div class="student-form">
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lastName" />
+          </div>
+
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="firstName" />
+          </div>
+
+          <div class="form-group">
+            <label>Middle Name</label>
+            <input type="text" id="middleName" />
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+
+            <select id="gender">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Academic Level</label>
+            <input type="text" id="academicLevel" />
+          </div>
+
+          <div class="form-group">
+            <label>Section</label>
+            <input type="text" id="section" />
+          </div>
+
+          <div class="form-group email">
+            <label>Email</label>
+            <input type="email" id="email" />
+          </div>
+        </div>
+
+        <div class="panel-buttons">
+          <button class="btn-save" id="saveButton"></button>
+
+          <button class="btn-cancel" id="cancelButton">Cancel</button>
+
+          <button class="btn-delete" id="deleteButton">Delete</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
